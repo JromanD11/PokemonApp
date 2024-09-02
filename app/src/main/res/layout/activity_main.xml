@@ -15,6 +15,7 @@
             android:id="@+id/imageView"
             android:layout_width="327dp"
             android:layout_height="141dp"
+            android:contentDescription="TODO"
             android:src="@drawable/logo"
             app:layout_constraintBottom_toTopOf="@+id/recyclerView"
             app:layout_constraintEnd_toEndOf="parent"

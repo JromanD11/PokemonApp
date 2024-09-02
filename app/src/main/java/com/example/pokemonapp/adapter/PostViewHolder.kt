@@ -8,11 +8,7 @@ import com.example.pokemonapp.Post
 import com.example.pokemonapp.R
 
 class PostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    val imgpokemon = itemView.findViewById<ImageView>(R.id.imgurl)
-    val namepokemon = itemView.findViewById<TextView>(R.id.nameid)
-
-    fun onBind(post: Post){
-        imgpokemon.i
-    }
+    val imgPokemon = itemView.findViewById<ImageView>(R.id.imgurl)
+    val namePokemon = itemView.findViewById<TextView>(R.id.nameid)
 
 }

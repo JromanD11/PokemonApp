@@ -25,6 +25,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun getImagesFromPicasso(){
+        // pasar lo que llegue del api en el parametro sprites front_default a la dataClass Post
+
+    }
+
     private fun fetchData(){
         CoroutineScope(Dispatchers.IO).launch {
             val post = RetrofitInstance.api.getPost()
