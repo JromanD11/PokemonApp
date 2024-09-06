@@ -1,7 +1,9 @@
 package com.example.pokemonapp
-
-data class Post(
-
+public data class Post (
     val name: String,
-    val url: String
+    val url: String,
+
 )
+
+
+

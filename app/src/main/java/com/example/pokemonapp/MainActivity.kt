@@ -6,6 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pokemonapp.adapter.PostAdapter
 import com.example.pokemonapp.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -23,23 +26,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-    }
-
-    fun getImagesFromPicasso(){
-        // pasar lo que llegue del api en el parametro sprites front_default a la dataClass Post
+        initRecyclerView()
 
     }
 
-    private fun fetchData(){
-        CoroutineScope(Dispatchers.IO).launch {
-            val post = RetrofitInstance.api.getPost()
-            withContext(Dispatchers.Main){
-
-                ///adapter y recyclerView
-
-        }
-
-        }
+    fun initRecyclerView(){
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager=LinearLayoutManager(this)
+        recyclerView.adapter = PostAdapter(Post.post)
     }
+
 
 }

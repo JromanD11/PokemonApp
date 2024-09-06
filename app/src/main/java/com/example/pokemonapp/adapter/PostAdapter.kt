@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemonapp.Post
 import com.example.pokemonapp.R
 
-class PostAdapter (private val post: List<Post>): RecyclerView.Adapter<PostViewHolder>()
+class PostAdapter ( private val post: List<Post>): RecyclerView.Adapter<PostViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.post_item,parent,false)
@@ -18,8 +18,8 @@ class PostAdapter (private val post: List<Post>): RecyclerView.Adapter<PostViewH
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val post = posts[position]
-        holder.onBind(post)
+        val post = post [position]
+        holder.render(post)
     }
 
 }
